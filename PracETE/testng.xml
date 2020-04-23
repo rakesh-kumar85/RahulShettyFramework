@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" configfailurepolicy="continue">
+	<test name="test login ">
+		<classes>
+			<class name="Academy.HomePage" />
+		</classes>
+	</test>
+
+	<test name="menubar">
+		<classes>
+			<class name="Academy.ValidateNavBar" />
+		</classes>
+	</test> 
+</suite> 

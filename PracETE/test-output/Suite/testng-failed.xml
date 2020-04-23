@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="test login ">
+    <classes>
+      <class name="Academy.HomePage"/>
+    </classes>
+  </test> <!-- test login  -->
+  <test name="menubar">
+    <classes>
+      <class name="Academy.ValidateNavBar"/>
+    </classes>
+  </test> <!-- menubar -->
+  <test name="test login (failed)">
+    <classes>
+      <class name="Academy.ValidateNavBar">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Academy.ValidateNavBar -->
+      <class name="Academy.HomePage">
+        <methods>
+          <include name="initializedriverBrowser"/>
+          <include name="basePageNavigation" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Academy.HomePage -->
+    </classes>
+  </test> <!-- test login (failed) -->
+  <test name="menubar(failed)">
+    <classes>
+      <class name="Academy.ValidateNavBar">
+        <methods>
+          <include name="initialize"/>
+          <include name="validateAppNavBar"/>
+        </methods>
+      </class> <!-- Academy.ValidateNavBar -->
+      <class name="Academy.HomePage">
+        <methods>
+          <include name="initializedriverBrowser"/>
+        </methods>
+      </class> <!-- Academy.HomePage -->
+    </classes>
+  </test> <!-- menubar(failed) -->
+</suite> <!-- Failed suite [Suite] -->
